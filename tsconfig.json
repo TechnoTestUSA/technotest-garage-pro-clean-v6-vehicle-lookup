@@ -1,0 +1,9 @@
+import type { AppData, Vehicle } from '@/types';
+
+export function getVehicleById(data: AppData, id?: string): Vehicle | undefined {
+  return data.vehicles.find((vehicle) => vehicle.id === id);
+}
+
+export function getTotalSpend(data: AppData): number {
+  return data.ledger.reduce((sum, item) => sum + item.amount, 0);
+}

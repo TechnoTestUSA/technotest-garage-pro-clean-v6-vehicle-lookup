@@ -1,0 +1,7 @@
+import type { AppData, Locale } from '@/types';
+
+export function buildAssistantReply(_data: AppData, _userText: string, locale: Locale) {
+  return locale === 'he'
+    ? 'בגרסה הזו העוזר הדיגיטלי עדיין במצב בסיסי. לאחר חיבור Supabase נוכל לתת המלצות לפי נתוני הרכב האמיתיים שלך.'
+    : 'In this version the assistant is still basic. After Supabase is connected, it can provide recommendations based on your real vehicle data.';
+}
